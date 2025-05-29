@@ -78,46 +78,12 @@
     .game-item p {
       color: #aaa;
     }
-    iframe {
-      border: none;
-      width: 100%;
-      height: 202px;
-      margin-top: 10px;
-    }
     footer {
       background: #1f1f1f;
       padding: 20px;
       text-align: center;
       font-size: 0.9rem;
       color: #777;
-    }
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.95);
-      z-index: 1000;
-      justify-content: center;
-      align-items: center;
-    }
-    .overlay iframe {
-      width: 90%;
-      height: 90%;
-    }
-    .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: #00ffcc;
-      color: #000;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
     }
   </style>
   <script>
@@ -127,12 +93,6 @@
       if (gamesSection.style.display === 'block') {
         gamesSection.scrollIntoView({ behavior: 'smooth' });
       }
-    }
-    function openFullscreen() {
-      document.getElementById('fullscreenOverlay').style.display = 'flex';
-    }
-    function closeFullscreen() {
-      document.getElementById('fullscreenOverlay').style.display = 'none';
     }
   </script>
 </head>
@@ -150,26 +110,10 @@
       <div class="game-item">
         <h3>Gulli Clicker</h3>
         <p>A fun and addictive clicker game with a quirky twist!</p>
-        <iframe 
-          src="https://scratch.mit.edu/projects/1048768469/embed" 
-          allowtransparency="true" 
-          frameborder="0" 
-          scrolling="no" 
-          allowfullscreen>
-        </iframe>
-        <br>
-        <button class="btn" style="margin-top:10px;" onclick="openFullscreen()">Play Fullscreen</button>
+        <a href="gulli-clicker.html" class="btn" style="display:inline-block;margin-top:10px;">Play Fullscreen</a>
       </div>
     </div>
   </section>
-
-  <div id="fullscreenOverlay" class="overlay">
-    <button class="close-btn" onclick="closeFullscreen()">Close</button>
-    <iframe 
-      src="https://scratch.mit.edu/projects/1048768469/fullscreen/" 
-      allowfullscreen>
-    </iframe>
-  </div>
 
   <footer>
     &copy; 2025 Gulli Games. All rights reserved.
